@@ -8,6 +8,7 @@ const note1 = Color(0XFFC7EBB3);
 const calendar = Color(0XFF21262C);
 const bcalendar = Color(0XFFE5E5E5);
 const onboardingcontainer = Color(0XFFFAF0D4);
+const appcolor = Color(0XFFF3BC43);
 
 
 //margin from the top
@@ -23,3 +24,5 @@ const buttonheadings =
     TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20);
 const subwords =
     TextStyle(color: Colors.black,  fontSize: 14);
+const hintext =
+    TextStyle(color:  Color(0xFF555454),  fontSize: 14, );

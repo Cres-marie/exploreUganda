@@ -1,3 +1,4 @@
+import 'package:explore_uganda/screens/loginScreens/login.dart';
 import 'package:explore_uganda/screens/onBoardingScreens/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,7 +28,8 @@ class _MyAppState extends State<MyApp> {
       ),
       
       debugShowCheckedModeBanner: false,
-      home: OnBoarding()
+      // home: OnBoarding()
+      home: Login(),
 
     );
   }
