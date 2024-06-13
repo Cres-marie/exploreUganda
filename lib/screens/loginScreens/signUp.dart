@@ -1,5 +1,6 @@
 import 'package:explore_uganda/components/constants/constants.dart';
 import 'package:explore_uganda/screens/loginScreens/login.dart';
+import 'package:explore_uganda/screens/termsandConditionsScreen/termsofuse.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -253,7 +254,13 @@ class _SignUpState extends State<SignUp> {
         recognizer: TapGestureRecognizer()
           ..onTap = () {
             // Navigate to Terms and Conditions page or perform any action
-            
+            Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              TermsOfUse(), // Replace with your sign up page widget
+                                        ),
+                                      );
           },
       ),
     ],
