@@ -83,15 +83,18 @@ class _OnBoardingState extends State<OnBoarding> {
                 ),
 
                  TextButton(
-                    onPressed: _currentPage == 2
-                        ? null
-                        : () {
-                            _pageController.nextPage(
-                              duration: Duration(milliseconds: 300),
-                              curve: Curves.easeInOut,
-                            );
-                          },
-                    child: Text('Next'),
+                    onPressed: () {
+                      if (_currentPage == 2) {
+                        // Navigate to the home page
+                        Navigator.pushReplacementNamed(context, '/bottombar');
+                      }else {
+                        _pageController.nextPage(
+                          duration: Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                        );
+                      }
+                    },
+                      child: Text(_currentPage == 2 ? 'Done' : 'Next'),  
                   ),
 
               ],

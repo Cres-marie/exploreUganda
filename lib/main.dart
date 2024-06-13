@@ -1,3 +1,5 @@
+import 'package:explore_uganda/components/bottomNavBar/bottomNavBar.dart';
+import 'package:explore_uganda/screens/HomeScreens/Home.dart';
 import 'package:explore_uganda/screens/loginScreens/login.dart';
 import 'package:explore_uganda/screens/onBoardingScreens/onboarding.dart';
 import 'package:flutter/material.dart';
@@ -29,8 +31,12 @@ class _MyAppState extends State<MyApp> {
       
       debugShowCheckedModeBanner: false,
       // home: OnBoarding()
-      home: Login(),
-
+      // home: Login(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Login(), // Home screen
+        '/bottombar': (context) => BottomNavBar(index: 0), // body care Page
+      }
     );
   }
 }
