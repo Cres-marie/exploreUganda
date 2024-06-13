@@ -239,10 +239,27 @@ class _SignUpState extends State<SignUp> {
                           },
                           activeColor: appcolor,
                         ),
-                        Text(
-                          'I agree with the Terms and Conditions',
-                          style: subwords,
-                        )
+                        RichText(
+  text: TextSpan(
+    text: 'I agree with the ',
+    style: subwords,
+    children: [
+      TextSpan(
+        text: 'Terms and Conditions',
+        style: subwords.copyWith(
+          decoration: TextDecoration.underline,
+          
+        ),
+        recognizer: TapGestureRecognizer()
+          ..onTap = () {
+            // Navigate to Terms and Conditions page or perform any action
+            
+          },
+      ),
+    ],
+  ),
+)
+
                       ],
                     ),
                     const SizedBox(

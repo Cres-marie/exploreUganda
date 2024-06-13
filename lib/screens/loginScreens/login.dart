@@ -12,6 +12,151 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+
+
+
+  void _showSecondBottomSheet(){
+    showModalBottomSheet(
+      context: context, 
+      builder: (context){
+
+        return Container(
+          width: MediaQuery.of(context).size.width,
+          padding: bpadding,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                
+                Container(
+                  width: 60,
+                  height: 6,
+                  color: Colors.grey,
+                ),
+            
+                SizedBox(height: 30,),
+            
+                Text('Process Complete', style: bheadings,),
+            
+                SizedBox(height: 15,),
+            
+                Divider(),
+            
+                SizedBox(height: 15,),
+            
+                Text('Check your email inbox and follow the steps to recover your password', style: subwords, textAlign: TextAlign.center,),
+            
+                SizedBox(height: 20,),
+                
+                IconButton(
+                  onPressed: (){}, 
+                  icon: Icon(Icons.check, color: appcolor, size: 70,)
+                )
+                        
+              ],
+            ),
+          ),
+        );
+      }
+    );
+  }
+
+
+
+  void _showForgotPasswordModal(){
+    showModalBottomSheet(
+      context: context, 
+      builder: (context){
+
+        return Container(
+          width: MediaQuery.of(context).size.width,
+          padding: bpadding,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                
+                Container(
+                  width: 60,
+                  height: 6,
+                  color: Colors.grey,
+                ),
+            
+                SizedBox(height: 30,),
+            
+                Text('Forgot Password?', style: bheadings,),
+            
+                SizedBox(height: 15,),
+            
+                Divider(),
+            
+                SizedBox(height: 15,),
+            
+                Text('Key in your credentials below to begin recovery process', style: subwords, textAlign: TextAlign.center,),
+            
+                SizedBox(height: 20,),
+                
+                TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'Email Address',
+                          hintStyle: hintext,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(
+                              color: appcolor,
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(
+                              color: Color(0xFFF3BC43),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(
+                              color: appcolor,
+                            ),
+                          ),
+                        ),
+                        keyboardType: TextInputType.emailAddress,
+                        textInputAction: TextInputAction.next,
+                      ),
+            
+                const SizedBox(
+                  height: 20,
+                ),
+            
+                SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        height: 50,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                      _showSecondBottomSheet();
+                          },
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStateProperty.all(appcolor),
+                            shape: WidgetStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                          ),
+                          child: const Text(
+                            'Submit',
+                            style: subwords,
+                          ),
+                        ),
+                      ),
+            
+            
+              ],
+            ),
+          ),
+        );
+      }
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -137,7 +282,10 @@ class _LoginState extends State<Login> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text('Forgot Password?')
+                        GestureDetector(
+                          onTap: _showForgotPasswordModal,
+                          child: Text('Forgot Password?')
+                        )
                       ],
                     ),
 
