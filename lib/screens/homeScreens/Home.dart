@@ -2,6 +2,9 @@ import 'package:explore_uganda/components/constants/constants.dart';
 import 'package:explore_uganda/screens/homeScreens/Accomodation.dart';
 import 'package:explore_uganda/screens/homeScreens/All.dart';
 import 'package:explore_uganda/screens/homeScreens/Attractions.dart';
+import 'package:explore_uganda/screens/homeScreens/Events.dart';
+import 'package:explore_uganda/screens/homeScreens/Investments.dart';
+import 'package:explore_uganda/screens/homeScreens/MarketPlace.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -74,9 +77,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     All(),
                     Attractions(),
                     Accomodation(),
-                    Center(child: Text('Events')),
-                    Center(child: Text('Market Place')),
-                    Center(child: Text('Investments')),
+                    Events(),
+                    MarketPlace(),
+                    Investments(),
+                   
                   ],
                 ),
               ),

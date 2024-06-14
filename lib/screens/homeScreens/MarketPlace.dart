@@ -1,17 +1,18 @@
 import 'package:explore_uganda/components/constants/constants.dart';
 import 'package:flutter/material.dart';
 
-class Accomodation extends StatefulWidget {
-  const Accomodation({super.key});
+class MarketPlace extends StatefulWidget {
+  const MarketPlace({super.key});
 
   @override
-  State<Accomodation> createState() => _AccomodationState();
+  State<MarketPlace> createState() => _MarketPlaceState();
 }
 
-class _AccomodationState extends State<Accomodation> {
+class _MarketPlaceState extends State<MarketPlace> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -20,7 +21,7 @@ class _AccomodationState extends State<Accomodation> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Accomodation',
+                'Market Place',
                 style: subwords,
               ),
               TextButton(
@@ -35,44 +36,32 @@ class _AccomodationState extends State<Accomodation> {
             height: 5,
           ),
 
-          Image.asset('assets/accomodation.png'),
+          Image.asset('assets/market.png'),
           SizedBox(
             height: 10,
           ),
           Text(
-            'VILLA',
+            'MARKET PLACE',
             style: categories,
           ),
           // SizedBox(height: 5,),
           Text(
-            'Flat in Kampala',
+            'Hotels, Events, Tours, Car and Air travel',
             style: subwords,
           ),
-          Text(
-            '1 bedroom with a spacious living room',
-            style: normalText,
-          ),
-          SizedBox(
-            height: 5,
-          ),
+          
+          
           Row(
             children: [
-              RichText(
-                text: TextSpan(
-                    text: "\$23",
-                    style: subwords,
-                    children: [
-                      TextSpan(
-                        text: "/night",
-                        
-                        
-                      ),
-                    ]),
-              )
+              Icon(Icons.star, size: 15,),
+              Text('4.1', style: normalText,),
+              Text('(121 reviews)', style: normalText,)
             ],
-          )
+          ),
+          
         ],
       ),
+
     );
   }
 }

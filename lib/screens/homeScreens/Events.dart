@@ -1,17 +1,18 @@
 import 'package:explore_uganda/components/constants/constants.dart';
 import 'package:flutter/material.dart';
 
-class Accomodation extends StatefulWidget {
-  const Accomodation({super.key});
+class Events extends StatefulWidget {
+  const Events({super.key});
 
   @override
-  State<Accomodation> createState() => _AccomodationState();
+  State<Events> createState() => _EventsState();
 }
 
-class _AccomodationState extends State<Accomodation> {
+class _EventsState extends State<Events> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -20,7 +21,7 @@ class _AccomodationState extends State<Accomodation> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Accomodation',
+                'To Do',
                 style: subwords,
               ),
               TextButton(
@@ -35,21 +36,21 @@ class _AccomodationState extends State<Accomodation> {
             height: 5,
           ),
 
-          Image.asset('assets/accomodation.png'),
+          Image.asset('assets/event.png'),
           SizedBox(
             height: 10,
           ),
           Text(
-            'VILLA',
+            'ART',
             style: categories,
           ),
           // SizedBox(height: 5,),
           Text(
-            'Flat in Kampala',
+            'Muloma’s Exhibition',
             style: subwords,
           ),
           Text(
-            '1 bedroom with a spacious living room',
+            'Enjoy mixed media paintings done by a recognized artist',
             style: normalText,
           ),
           SizedBox(
@@ -57,18 +58,9 @@ class _AccomodationState extends State<Accomodation> {
           ),
           Row(
             children: [
-              RichText(
-                text: TextSpan(
-                    text: "\$23",
-                    style: subwords,
-                    children: [
-                      TextSpan(
-                        text: "/night",
-                        
-                        
-                      ),
-                    ]),
-              )
+              Icon(Icons.location_on_outlined, size: 15,),
+              
+              Text('Masindi, Uganda', style: normalText,)
             ],
           )
         ],
