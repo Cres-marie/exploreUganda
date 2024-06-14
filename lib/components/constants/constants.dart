@@ -26,3 +26,7 @@ const subwords =
     TextStyle(color: Colors.black,  fontSize: 14);
 const hintext =
     TextStyle(color:  Color(0xFF555454),  fontSize: 14, );
+const normalText =
+    TextStyle(color:  Color(0xFF4E5152),  fontSize: 14, );
+const categories =
+    TextStyle(color: Color(0XFFF3BC43), fontWeight: FontWeight.bold, fontSize: 12);

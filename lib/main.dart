@@ -32,9 +32,9 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       // home: OnBoarding()
       // home: Login(),
-      initialRoute: '/',
+      initialRoute: '/bottombar',
       routes: {
-        '/': (context) => Login(), // Home screen
+        '/': (context) => Home(), // Home screen
         '/bottombar': (context) => BottomNavBar(index: 0), // body care Page
       }
     );
