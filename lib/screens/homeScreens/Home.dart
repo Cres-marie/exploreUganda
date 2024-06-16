@@ -1,4 +1,5 @@
 import 'package:explore_uganda/components/constants/constants.dart';
+import 'package:explore_uganda/components/customComponents/CustomAppRow.dart';
 import 'package:explore_uganda/screens/homeScreens/Accomodation.dart';
 import 'package:explore_uganda/screens/homeScreens/All.dart';
 import 'package:explore_uganda/screens/homeScreens/Attractions.dart';
@@ -41,13 +42,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   Text('Find your destination', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),),
-                  Row(
-                    children: [
-                      IconButton(onPressed: () {}, icon: Icon(Icons.search_outlined)),
-                      IconButton(onPressed: () {}, icon: Icon(Icons.favorite_outline)),
-                      IconButton(onPressed: () {}, icon: Icon(Icons.person_2_outlined))
-                    ],
-                  )
+                  CustomAppRow()
                 ]),
               
               
