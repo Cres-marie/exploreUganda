@@ -81,7 +81,7 @@ class _AllMarketState extends State<AllMarket> {
             ],
           ),
 
-          Text('Tickets frm USH 40,000 - 60,000', style: normalText,)
+          
 
         ],
       ),
