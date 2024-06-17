@@ -1,11 +1,11 @@
 import 'package:explore_uganda/components/constants/constants.dart';
 import 'package:explore_uganda/components/customComponents/CustomAppRow.dart';
-import 'package:explore_uganda/screens/homeScreens/Accomodation.dart';
-import 'package:explore_uganda/screens/homeScreens/All.dart';
-import 'package:explore_uganda/screens/homeScreens/Attractions.dart';
-import 'package:explore_uganda/screens/homeScreens/Events.dart';
-import 'package:explore_uganda/screens/homeScreens/Investments.dart';
-import 'package:explore_uganda/screens/homeScreens/MarketPlace.dart';
+import 'package:explore_uganda/screens/homeScreens/homeTabs/Accomodation.dart';
+import 'package:explore_uganda/screens/homeScreens/homeTabs/All.dart';
+import 'package:explore_uganda/screens/homeScreens/homeTabs/Attractions.dart';
+import 'package:explore_uganda/screens/homeScreens/homeTabs/Events.dart';
+import 'package:explore_uganda/screens/homeScreens/homeTabs/Investments.dart';
+import 'package:explore_uganda/screens/homeScreens/homeTabs/MarketPlace.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {

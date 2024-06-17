@@ -1,9 +1,9 @@
 import 'package:explore_uganda/components/constants/constants.dart';
 import 'package:explore_uganda/components/customComponents/CustomAppRow.dart';
-import 'package:explore_uganda/screens/marketScreens/AllMarket.dart';
-import 'package:explore_uganda/screens/marketScreens/Fleet.dart';
-import 'package:explore_uganda/screens/marketScreens/Horeca.dart';
-import 'package:explore_uganda/screens/marketScreens/TourGuide.dart';
+import 'package:explore_uganda/screens/marketScreens/marketTabs/AllMarket.dart';
+import 'package:explore_uganda/screens/marketScreens/marketTabs/Fleet.dart';
+import 'package:explore_uganda/screens/marketScreens/marketTabs/Horeca.dart';
+import 'package:explore_uganda/screens/marketScreens/marketTabs/TourGuide.dart';
 import 'package:flutter/material.dart';
 
 class Market extends StatefulWidget {

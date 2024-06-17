@@ -1,10 +1,10 @@
 import 'package:explore_uganda/components/constants/constants.dart';
 import 'package:explore_uganda/components/customComponents/CustomAppRow.dart';
-import 'package:explore_uganda/screens/todoScreens/Agriculture.dart';
-import 'package:explore_uganda/screens/todoScreens/Art.dart';
-import 'package:explore_uganda/screens/todoScreens/MICE.dart';
-import 'package:explore_uganda/screens/todoScreens/Music.dart';
-import 'package:explore_uganda/screens/todoScreens/Technology.dart';
+import 'package:explore_uganda/screens/todoScreens/toDoTabs/Agriculture.dart';
+import 'package:explore_uganda/screens/todoScreens/toDoTabs/Art.dart';
+import 'package:explore_uganda/screens/todoScreens/toDoTabs/MICE.dart';
+import 'package:explore_uganda/screens/todoScreens/toDoTabs/Music.dart';
+import 'package:explore_uganda/screens/todoScreens/toDoTabs/Technology.dart';
 import 'package:flutter/material.dart';
 
 class ToDo extends StatefulWidget {
