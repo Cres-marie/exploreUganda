@@ -1,6 +1,9 @@
 import 'package:explore_uganda/components/constants/constants.dart';
 import 'package:explore_uganda/components/customComponents/CustomAppRow.dart';
 import 'package:explore_uganda/components/customComponents/customProfileAvatar.dart';
+import 'package:explore_uganda/screens/moreScreens/morePages/editProfile.dart';
+import 'package:explore_uganda/screens/moreScreens/morePages/language.dart';
+import 'package:explore_uganda/screens/moreScreens/morePages/notification.dart';
 import 'package:flutter/material.dart';
 
 class More extends StatefulWidget {
@@ -33,9 +36,7 @@ class _MoreState extends State<More> {
                 SizedBox(
                   height: 30,
                 ),
-                
                 ProfileAvatar(),
-
                 SizedBox(
                   height: 10,
                 ),
@@ -53,58 +54,85 @@ class _MoreState extends State<More> {
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.account_circle_outlined,
-                              color: appcolor,
-                            ),
-                            SizedBox(
-                              width: 15,
-                            ),
-                            Text('Edit Profile')
-                          ],
+                        InkWell(
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.account_circle_outlined,
+                                color: appcolor,
+                              ),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              Text('Edit Profile')
+                            ],
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => EditProfile()),
+                            );
+                          },
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.translate_outlined,
-                                  color: appcolor,
-                                ),
-                                SizedBox(
-                                  width: 15,
-                                ),
-                                Text('Language')
-                              ],
-                            ),
-                            TextButton(
-                                onPressed: () {},
-                                child: Text(
-                                  'English',
-                                  style: TextStyle(color: appcolor),
-                                ))
-                          ],
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Language()),
+                            );
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.translate_outlined,
+                                    color: appcolor,
+                                  ),
+                                  SizedBox(
+                                    width: 15,
+                                  ),
+                                  Text('Language')
+                                ],
+                              ),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    'English',
+                                    style: TextStyle(color: appcolor),
+                                  ))
+                            ],
+                          ),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.notifications_active_outlined,
-                              color: appcolor,
-                            ),
-                            SizedBox(
-                              width: 15,
-                            ),
-                            Text('Notification')
-                          ],
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Notifications()),
+                            );
+                          },
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.notifications_active_outlined,
+                                color: appcolor,
+                              ),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              Text('Notification')
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -121,17 +149,26 @@ class _MoreState extends State<More> {
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.fire_truck_outlined,
-                              color: appcolor,
-                            ),
-                            SizedBox(
-                              width: 15,
-                            ),
-                            Text('Deals')
-                          ],
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => EditProfile()),
+                            );
+                          },
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.fire_truck_outlined,
+                                color: appcolor,
+                              ),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              Text('Deals')
+                            ],
+                          ),
                         ),
                         SizedBox(
                           height: 10,

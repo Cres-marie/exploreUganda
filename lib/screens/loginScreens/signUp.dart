@@ -241,32 +241,30 @@ class _SignUpState extends State<SignUp> {
                           activeColor: appcolor,
                         ),
                         RichText(
-  text: TextSpan(
-    text: 'I agree with the ',
-    style: subwords,
-    children: [
-      TextSpan(
-        text: 'Terms and Conditions',
-        style: subwords.copyWith(
-          decoration: TextDecoration.underline,
-          
-        ),
-        recognizer: TapGestureRecognizer()
-          ..onTap = () {
-            // Navigate to Terms and Conditions page or perform any action
-            Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              TermsOfUse(), // Replace with your sign up page widget
-                                        ),
-                                      );
-          },
-      ),
-    ],
-  ),
-)
-
+                          text: TextSpan(
+                            text: 'I agree with the ',
+                            style: subwords,
+                            children: [
+                              TextSpan(
+                                text: 'Terms and Conditions',
+                                style: subwords.copyWith(
+                                  decoration: TextDecoration.underline,
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    // Navigate to Terms and Conditions page or perform any action
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            TermsOfUse(), // Replace with your sign up page widget
+                                      ),
+                                    );
+                                  },
+                              ),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                     const SizedBox(
