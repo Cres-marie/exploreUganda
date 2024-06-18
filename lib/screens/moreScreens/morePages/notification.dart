@@ -70,6 +70,8 @@ class _NotificationsState extends State<Notifications> {
                       activeTrackColor: appcolor, // Track color when the switch is on
                       inactiveThumbColor: Colors.white, // Thumb color when the switch is off
                       inactiveTrackColor: unselectedTileColor, // Track color when the switch is off
+                      contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                      trackOutlineColor: WidgetStateColor.transparent,
                     ),
 
                     SwitchListTile(
@@ -80,6 +82,8 @@ class _NotificationsState extends State<Notifications> {
                       activeTrackColor: appcolor, // Track color when the switch is on
                       inactiveThumbColor: Colors.white, // Thumb color when the switch is off
                       inactiveTrackColor: unselectedTileColor, // Track color when the switch is off
+                      contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                      trackOutlineColor: WidgetStateColor.transparent,
                     ),
 
                     SwitchListTile(
@@ -90,6 +94,8 @@ class _NotificationsState extends State<Notifications> {
                       activeTrackColor: appcolor, // Track color when the switch is on
                       inactiveThumbColor: Colors.white, // Thumb color when the switch is off
                       inactiveTrackColor: unselectedTileColor, // Track color when the switch is off
+                      contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                      trackOutlineColor: WidgetStateColor.transparent,
                     ),
 
                     Divider(),
@@ -106,6 +112,8 @@ class _NotificationsState extends State<Notifications> {
                       activeTrackColor: appcolor, // Track color when the switch is on
                       inactiveThumbColor: Colors.white, // Thumb color when the switch is off
                       inactiveTrackColor: unselectedTileColor, // Track color when the switch is off
+                      contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                      trackOutlineColor: WidgetStateColor.transparent,
                     ),
 
                     SwitchListTile(
@@ -116,6 +124,8 @@ class _NotificationsState extends State<Notifications> {
                       activeTrackColor: appcolor, // Track color when the switch is on
                       inactiveThumbColor: Colors.white, // Thumb color when the switch is off
                       inactiveTrackColor: unselectedTileColor, // Track color when the switch is off
+                      contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                      trackOutlineColor: WidgetStateColor.transparent,
                     ),
 
                     SwitchListTile(
@@ -126,6 +136,8 @@ class _NotificationsState extends State<Notifications> {
                       activeTrackColor: appcolor, // Track color when the switch is on
                       inactiveThumbColor: Colors.white, // Thumb color when the switch is off
                       inactiveTrackColor: unselectedTileColor, // Track color when the switch is off
+                      contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                      trackOutlineColor: WidgetStateColor.transparent,
                     ),
 
                     SwitchListTile(
@@ -136,6 +148,8 @@ class _NotificationsState extends State<Notifications> {
                       activeTrackColor: appcolor, // Track color when the switch is on
                       inactiveThumbColor: Colors.white, // Thumb color when the switch is off
                       inactiveTrackColor: unselectedTileColor, // Track color when the switch is off
+                      contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                      trackOutlineColor: WidgetStateColor.transparent,
                     ),
 
                     SwitchListTile(
@@ -146,6 +160,8 @@ class _NotificationsState extends State<Notifications> {
                       activeTrackColor: appcolor, // Track color when the switch is on
                       inactiveThumbColor: Colors.white, // Thumb color when the switch is off
                       inactiveTrackColor: unselectedTileColor, // Track color when the switch is off
+                      contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                      trackOutlineColor: WidgetStateColor.transparent,
                     ),
 
                     Divider(),
@@ -162,6 +178,8 @@ class _NotificationsState extends State<Notifications> {
                       activeTrackColor: appcolor, // Track color when the switch is on
                       inactiveThumbColor: Colors.white, // Thumb color when the switch is off
                       inactiveTrackColor: unselectedTileColor, // Track color when the switch is off
+                      contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                      trackOutlineColor: WidgetStateColor.transparent,
                     ),
 
                     SwitchListTile(
@@ -172,6 +190,8 @@ class _NotificationsState extends State<Notifications> {
                       activeTrackColor: appcolor, // Track color when the switch is on
                       inactiveThumbColor: Colors.white, // Thumb color when the switch is off
                       inactiveTrackColor: unselectedTileColor, // Track color when the switch is off
+                      contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                      trackOutlineColor: WidgetStateColor.transparent,
                     ),
 
                   ],

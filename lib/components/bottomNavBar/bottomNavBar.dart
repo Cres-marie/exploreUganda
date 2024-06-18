@@ -69,7 +69,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             ),
             
              BottomNavigationBarItem(
-              icon: Icon(Icons.location_history),
+              icon: Icon(Icons.explore_outlined),
               label: 'Explore'
             ),
           

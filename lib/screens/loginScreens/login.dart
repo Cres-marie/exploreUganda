@@ -12,149 +12,150 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-
-
-
-  void _showSecondBottomSheet(){
+  void _showSecondBottomSheet() {
     showModalBottomSheet(
-      context: context, 
-      builder: (context){
-
-        return Container(
-          width: MediaQuery.of(context).size.width,
-          padding: bpadding,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                
-                Container(
-                  width: 60,
-                  height: 6,
-                  color: Colors.grey,
-                ),
-            
-                SizedBox(height: 30,),
-            
-                Text('Process Complete', style: bheadings,),
-            
-                SizedBox(height: 15,),
-            
-                Divider(),
-            
-                SizedBox(height: 15,),
-            
-                Text('Check your email inbox and follow the steps to recover your password', style: subwords, textAlign: TextAlign.center,),
-            
-                SizedBox(height: 20,),
-                
-                IconButton(
-                  onPressed: (){}, 
-                  icon: Icon(Icons.check, color: appcolor, size: 70,)
-                )
-                        
-              ],
+        context: context,
+        builder: (context) {
+          return Container(
+            width: MediaQuery.of(context).size.width,
+            padding: bpadding,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    width: 60,
+                    height: 6,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    'Process Complete',
+                    style: bheadings,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Divider(),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    'Check your email inbox and follow the steps to recover your password',
+                    style: subwords,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.check,
+                        color: appcolor,
+                        size: 70,
+                      ))
+                ],
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
-
-
-  void _showForgotPasswordModal(){
+  void _showForgotPasswordModal() {
     showModalBottomSheet(
-      context: context, 
-      builder: (context){
-
-        return Container(
-          width: MediaQuery.of(context).size.width,
-          padding: bpadding,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                
-                Container(
-                  width: 60,
-                  height: 6,
-                  color: Colors.grey,
-                ),
-            
-                SizedBox(height: 30,),
-            
-                Text('Forgot Password?', style: bheadings,),
-            
-                SizedBox(height: 15,),
-            
-                Divider(),
-            
-                SizedBox(height: 15,),
-            
-                Text('Key in your credentials below to begin recovery process', style: subwords, textAlign: TextAlign.center,),
-            
-                SizedBox(height: 20,),
-                
-                TextFormField(
-                        decoration: InputDecoration(
-                          hintText: 'Email Address',
-                          hintStyle: hintext,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                              color: appcolor,
-                            ),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                              color: Color(0xFFF3BC43),
-                            ),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                              color: appcolor,
-                            ),
-                          ),
+        context: context,
+        builder: (context) {
+          return Container(
+            width: MediaQuery.of(context).size.width,
+            padding: bpadding,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    width: 60,
+                    height: 6,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    'Forgot Password?',
+                    style: bheadings,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Divider(),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    'Key in your credentials below to begin recovery process',
+                    style: subwords,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      hintText: 'Email Address',
+                      hintStyle: hintext,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(
+                          color: appcolor,
                         ),
-                        keyboardType: TextInputType.emailAddress,
-                        textInputAction: TextInputAction.next,
                       ),
-            
-                const SizedBox(
-                  height: 20,
-                ),
-            
-                SizedBox(
-                        width: MediaQuery.of(context).size.width,
-                        height: 50,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                      _showSecondBottomSheet();
-                          },
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all(appcolor),
-                            shape: WidgetStateProperty.all(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                            ),
-                          ),
-                          child: const Text(
-                            'Submit',
-                            style: subwords,
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(
+                          color: Color(0xFFF3BC43),
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(
+                          color: appcolor,
+                        ),
+                      ),
+                    ),
+                    keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 50,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                        _showSecondBottomSheet();
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(appcolor),
+                        shape: WidgetStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
                           ),
                         ),
                       ),
-            
-            
-              ],
+                      child: const Text(
+                        'Submit',
+                        style: subwords,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
   @override
@@ -255,10 +256,12 @@ class _LoginState extends State<Login> {
                       child: ElevatedButton(
                         onPressed: () {
                           // Navigate to the onboarding screens here
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => OnBoarding()), // Replace with your OnboardingScreens widget
-                      );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    OnBoarding()), // Replace with your OnboardingScreens widget
+                          );
                         },
                         style: ButtonStyle(
                           backgroundColor: WidgetStateProperty.all(appcolor),
@@ -274,124 +277,116 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-
                     const SizedBox(
                       height: 10,
                     ),
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         GestureDetector(
-                          onTap: _showForgotPasswordModal,
-                          child: Text('Forgot Password?')
-                        )
+                            onTap: _showForgotPasswordModal,
+                            child: Text('Forgot Password?'))
                       ],
                     ),
-
                     const SizedBox(
                       height: 20,
                     ),
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        
                         Text('OR'),
                       ],
                     ),
-
                     const SizedBox(
                       height: 20,
                     ),
-
                     SizedBox(
                       width: MediaQuery.of(context).size.width,
                       height: 50,
                       child: OutlinedButton.icon(
-                        onPressed: (){}, 
-                        style: ButtonStyle(
-                          side: WidgetStateProperty.all(
-                        BorderSide(color: appcolor), // Border color
-                      ),
-                      shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                        ),
-
-                        icon: Image.asset('assets/google.png',
-                    height: 23.0,
-                    width: 23.0,
-                  ),
-                        label: Text('Sign Up with Google', style: subwords,)
-                      ),
+                          onPressed: () {},
+                          style: ButtonStyle(
+                            side: WidgetStateProperty.all(
+                              BorderSide(color: appcolor), // Border color
+                            ),
+                            shape: WidgetStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                          ),
+                          icon: Image.asset(
+                            'assets/google.png',
+                            height: 23.0,
+                            width: 23.0,
+                          ),
+                          label: Text(
+                            'Sign Up with Google',
+                            style: subwords,
+                          )),
                     ),
-
                     const SizedBox(
                       height: 15,
                     ),
-
                     SizedBox(
                       width: MediaQuery.of(context).size.width,
                       height: 50,
                       child: OutlinedButton.icon(
-                        onPressed: (){}, 
-                        style: ButtonStyle(
-                          side: WidgetStateProperty.all(
-                        BorderSide(color: appcolor), // Border color
-                      ),
-                      shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                        ),
-
-                        icon: Image.asset('assets/facebook.png',
-                    height: 23.0,
-                    width: 23.0,
-                  ),
-                        label: Text('Sign Up with Facebook', style: subwords,)
-                      ),
+                          onPressed: () {},
+                          style: ButtonStyle(
+                            side: WidgetStateProperty.all(
+                              BorderSide(color: appcolor), // Border color
+                            ),
+                            shape: WidgetStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                          ),
+                          icon: Image.asset(
+                            'assets/facebook.png',
+                            height: 23.0,
+                            width: 23.0,
+                          ),
+                          label: Text(
+                            'Sign Up with Facebook',
+                            style: subwords,
+                          )),
                     ),
-
                     const SizedBox(
                       height: 10,
                     ),
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         RichText(
                           text: TextSpan(
-                            text: "Don’t have an account? ", style: subwords,
-                            children: [
-                              TextSpan(
-                          text: "Sign Up",
-                          style: TextStyle(
-                            color: appcolor, // Color for the "Sign Up" text
-                            fontWeight: FontWeight.bold,
-                          ),
-                          recognizer: TapGestureRecognizer()
-              ..onTap = () {
-                // Navigate to the sign up page
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SignUp(), // Replace with your sign up page widget
-                  ),
-                );
-              },
-                        ),
-                            ]
-                          ),
+                              text: "Don’t have an account? ",
+                              style: subwords,
+                              children: [
+                                TextSpan(
+                                  text: "Sign Up",
+                                  style: TextStyle(
+                                    color:
+                                        appcolor, // Color for the "Sign Up" text
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      // Navigate to the sign up page
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              SignUp(), // Replace with your sign up page widget
+                                        ),
+                                      );
+                                    },
+                                ),
+                              ]),
                         )
                       ],
                     ),
-
-
                   ],
                 ))
               ],
