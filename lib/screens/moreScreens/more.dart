@@ -7,6 +7,7 @@ import 'package:explore_uganda/screens/moreScreens/morePages/editProfile.dart';
 import 'package:explore_uganda/screens/moreScreens/morePages/language.dart';
 import 'package:explore_uganda/screens/moreScreens/morePages/notification.dart';
 import 'package:explore_uganda/screens/moreScreens/morePages/privacyPolicy.dart';
+import 'package:explore_uganda/screens/moreScreens/morePages/support.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -318,22 +319,31 @@ class _MoreState extends State<More> {
                         SizedBox(
                           height: 10,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.help_outline_outlined,
-                                  color: appcolor,
-                                ),
-                                SizedBox(
-                                  width: 15,
-                                ),
-                                Text('Support')
-                              ],
-                            ),
-                          ],
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Support()),
+                            );
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.help_outline_outlined,
+                                    color: appcolor,
+                                  ),
+                                  SizedBox(
+                                    width: 15,
+                                  ),
+                                  Text('Support')
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                         SizedBox(
                           height: 10,
