@@ -31,7 +31,7 @@ const subtitle =
 const buttonheadings =
     TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20);
 const subwords =
-    TextStyle(color: Colors.black,  fontSize: 14, );
+    TextStyle(color: Colors.black, fontWeight: FontWeight.w200,  fontSize: 14, );
 const hintext =
     TextStyle(color:  Color(0xFF555454),  fontSize: 14, );
 const normalText =
