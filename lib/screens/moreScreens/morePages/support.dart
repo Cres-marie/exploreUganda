@@ -1,4 +1,6 @@
 import 'package:explore_uganda/components/constants/constants.dart';
+import 'package:explore_uganda/screens/moreScreens/morePages/FAQ.dart';
+import 'package:explore_uganda/screens/moreScreens/morePages/aboutApp.dart';
 import 'package:flutter/material.dart';
 
 class Support extends StatefulWidget {
@@ -54,115 +56,133 @@ class _SupportState extends State<Support> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Color(0XFFE1E1E1), width: 1)),
-                        child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              Icons.info_outline,
-                                              color: appcolor,
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Text(
-                                              'About the App',
-                                              style: subtitle,
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Text(
-                                          'Check out all the information you need about the Explore Uganda application and the team behind it',
-                                          style: TextColor,
-                                        )
-                                      ],
+                    InkWell(
+                      onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AboutApp()),
+                            );
+                          },
+                      child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Color(0XFFE1E1E1), width: 1)),
+                          child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                Icons.info_outline,
+                                                color: appcolor,
+                                              ),
+                                              SizedBox(
+                                                width: 10,
+                                              ),
+                                              Text(
+                                                'About the App',
+                                                style: subtitle,
+                                              ),
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            'Check out all the information you need about the Explore Uganda application and the team behind it',
+                                            style: TextColor,
+                                          )
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      IconButton(
-                                          onPressed: () {},
-                                          icon: Icon(
-                                            Icons.arrow_right_alt_outlined,
-                                            color: appcolor,
-                                          )),
-                                    ],
-                                  )
-                                ]))),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        IconButton(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.arrow_right_alt_outlined,
+                                              color: appcolor,
+                                            )),
+                                      ],
+                                    )
+                                  ]))),
+                    ),
                     SizedBox(
                       height: 20,
                     ),
-                    Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Color(0XFFE1E1E1), width: 1)),
-                        child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              Icons.chat,
-                                              color: appcolor,
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Text(
-                                              'FAQs',
-                                              style: subtitle,
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Text(
-                                          'Stay informed with the latest app updates. And check out the most commonly asked questions by users to help enhance your experience',
-                                          style: TextColor,
-                                        )
-                                      ],
+                    InkWell(
+                      onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FAQ()),
+                            );
+                          },
+                      child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Color(0XFFE1E1E1), width: 1)),
+                          child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                Icons.chat,
+                                                color: appcolor,
+                                              ),
+                                              SizedBox(
+                                                width: 10,
+                                              ),
+                                              Text(
+                                                'FAQs',
+                                                style: subtitle,
+                                              ),
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            'Stay informed with the latest app updates. And check out the most commonly asked questions by users to help enhance your experience',
+                                            style: TextColor,
+                                          )
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      IconButton(
-                                          onPressed: () {},
-                                          icon: Icon(
-                                            Icons.arrow_right_alt_outlined,
-                                            color: appcolor,
-                                          )),
-                                    ],
-                                  )
-                                ]))),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        IconButton(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.arrow_right_alt_outlined,
+                                              color: appcolor,
+                                            )),
+                                      ],
+                                    )
+                                  ]))),
+                    ),
 
                                 SizedBox(
                       height: 20,
@@ -186,7 +206,7 @@ class _SupportState extends State<Support> {
                                         Row(
                                           children: [
                                             Icon(
-                                              Icons.chat_bubble_outline,
+                                              Icons.live_help_outlined,
                                               color: appcolor,
                                             ),
                                             SizedBox(
