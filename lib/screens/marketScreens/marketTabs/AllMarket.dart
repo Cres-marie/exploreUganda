@@ -53,7 +53,7 @@ class _AllMarketState extends State<AllMarket> {
                     height: 30,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.black,
+                      color: unselectedTileColor,
                     ),
                     
                     child: Center(

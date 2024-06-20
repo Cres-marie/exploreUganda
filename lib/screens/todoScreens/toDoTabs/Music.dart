@@ -31,14 +31,14 @@ class _MusicState extends State<Music> {
                     height: 30,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.black,
+                      color: unselectedTileColor,
                     ),
                     
                     child: Center(
                       child: IconButton(
                         
                         onPressed: (){}, 
-                        icon: Icon(Icons.favorite_outlined, color: Colors.white, size: 16,)
+                        icon: Icon(Icons.favorite_outlined, color: Colors.white, size: 16, weight: 2,)
                       ),
                     ),
                   ),
