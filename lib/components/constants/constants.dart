@@ -39,5 +39,5 @@ const normalText =
 const categories =
     TextStyle(color: Color(0XFFF3BC43), fontWeight: FontWeight.bold, fontSize: 12);
 const TextColor =
-    TextStyle(color:  Color(0xFF292D32),  fontSize: 14, );
+    TextStyle(color:  Color(0xFF000000),  fontSize: 14, );
     
