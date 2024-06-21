@@ -1,6 +1,7 @@
 import 'package:explore_uganda/components/constants/constants.dart';
 import 'package:explore_uganda/screens/moreScreens/morePages/FAQ.dart';
 import 'package:explore_uganda/screens/moreScreens/morePages/aboutApp.dart';
+import 'package:explore_uganda/screens/moreScreens/morePages/liveChat.dart';
 import 'package:flutter/material.dart';
 
 class Support extends StatefulWidget {
@@ -187,59 +188,68 @@ class _SupportState extends State<Support> {
                                 SizedBox(
                       height: 20,
                     ),
-                    Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Color(0XFFE1E1E1), width: 1)),
-                        child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              Icons.live_help_outlined,
-                                              color: appcolor,
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Text(
-                                              'Live Chat',
-                                              style: subtitle,
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Text(
-                                          'Got questions or need assistance? Our support team is here to help you, 24/7.',
-                                          style: TextColor,
-                                        )
-                                      ],
+                    InkWell(
+                      onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LiveChat()),
+                            );
+                          },
+                      child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Color(0XFFE1E1E1), width: 1)),
+                          child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                Icons.live_help_outlined,
+                                                color: appcolor,
+                                              ),
+                                              SizedBox(
+                                                width: 10,
+                                              ),
+                                              Text(
+                                                'Live Chat',
+                                                style: subtitle,
+                                              ),
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            'Got questions or need assistance? Our support team is here to help you, 24/7.',
+                                            style: TextColor,
+                                          )
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      IconButton(
-                                          onPressed: () {},
-                                          icon: Icon(
-                                            Icons.arrow_right_alt_outlined,
-                                            color: appcolor,
-                                          )),
-                                    ],
-                                  )
-                                ]))),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        IconButton(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.arrow_right_alt_outlined,
+                                              color: appcolor,
+                                            )),
+                                      ],
+                                    )
+                                  ]))),
+                    ),
                   ],
                 ),
               ),
