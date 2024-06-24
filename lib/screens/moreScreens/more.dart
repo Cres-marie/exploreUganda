@@ -19,7 +19,6 @@ class More extends StatefulWidget {
 }
 
 class _MoreState extends State<More> {
-
   void _showRateUsModal() {
     showModalBottomSheet(
         context: context,
@@ -40,44 +39,122 @@ class _MoreState extends State<More> {
                   SizedBox(
                     height: 30,
                   ),
-                  
                   Image.asset('assets/logo.png'),
-
-                   SizedBox(
-                    height: 20,
-                  ),
-
-                  Text('Rate your experience while using the app',style: subheadings, textAlign: TextAlign.center,),
-
                   SizedBox(
                     height: 20,
                   ),
-
-                  RatingBar.builder(
-                  initialRating: 3,
-                  minRating: 1,
-                  direction: Axis.horizontal,
-                  allowHalfRating: true,
-                  itemCount: 5,
-                  itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                  itemBuilder: (context, _) => Icon(
-                    Icons.star,
-                    color: appcolor,
+                  Text(
+                    'Rate your experience while using the app',
+                    style: subheadings,
+                    textAlign: TextAlign.center,
                   ),
-                  onRatingUpdate: (rating) {
-                    print(rating);
-                  },
-                ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  RatingBar.builder(
+                    initialRating: 3,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                    itemBuilder: (context, _) => Icon(
+                      Icons.star,
+                      color: appcolor,
+                    ),
+                    onRatingUpdate: (rating) {
+                      print(rating);
+                    },
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  reusableButton(text: 'Submit', onPressed: () {})
+                ],
+              ),
+            ),
+          );
+        });
+  }
 
-                SizedBox(
+  void _logoutModal() {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Container(
+            width: MediaQuery.of(context).size.width,
+            padding: bpadding,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    width: 60,
+                    height: 6,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                 
+                  Text(
+                    'Logout',
+                    style: bheadings,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Divider(),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    'Are you sure you want to logout?',
+                    style: subwords,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
                     height: 30,
                   ),
 
-                  reusableButton(
-                    text: 'Submit', 
-                    onPressed: (){}
+                  Row(
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width /2.5,
+                        child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0XFFE5E7EB), // Background color
+                            shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.circular(8), // Rounded corners
+                            ),
+                          ),
+                          onPressed: (){
+                            Navigator.pop(context);
+                          },
+                          label: Text('Cancel', style: subwords,), // Text size
+                        ),
+                      ),
+
+                      SizedBox(width: 20,),
+                     
+                     Container(
+                        width: MediaQuery.of(context).size.width /2.5,
+                        child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: appcolor, // Background color
+                            shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.circular(8), // Rounded corners
+                            ),
+                          ),
+                          onPressed: (){},
+                          label: Text('Yes, Logout ', style: subwords,), // Text size
+                        ),
+                      ),
+                    ],
                   )
-                  
                 ],
               ),
             ),
@@ -302,7 +379,6 @@ class _MoreState extends State<More> {
                       children: [
                         InkWell(
                           onTap: _showRateUsModal,
-                  
                           child: Row(
                             children: [
                               Icon(
@@ -372,17 +448,20 @@ class _MoreState extends State<More> {
                         SizedBox(
                           height: 10,
                         ),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.logout_outlined,
-                              color: appcolor,
-                            ),
-                            SizedBox(
-                              width: 15,
-                            ),
-                            Text('Logout')
-                          ],
+                        InkWell(
+                          onTap: _logoutModal,
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.logout_outlined,
+                                color: appcolor,
+                              ),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              Text('Logout')
+                            ],
+                          ),
                         ),
                       ],
                     ),
