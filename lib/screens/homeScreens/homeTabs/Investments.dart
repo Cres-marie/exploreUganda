@@ -1,4 +1,5 @@
 import 'package:explore_uganda/components/constants/constants.dart';
+import 'package:explore_uganda/screens/homeScreens/attractionsTabs/AttractionsTab.dart';
 import 'package:flutter/material.dart';
 
 class Investments extends StatefulWidget {
@@ -36,23 +37,38 @@ class _InvestmentsState extends State<Investments> {
             height: 5,
           ),
 
-          Image.asset('assets/investment.png'),
-          SizedBox(
-            height: 10,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AttractionsTab()),
+              );
+            },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Image.asset('assets/investment.png'),
+                SizedBox(
+              height: 10,
+            ),
+            Text(
+              'INVESTMENTS',
+              style: categories,
+            ),
+            // SizedBox(height: 5,),
+            Text(
+              'Several Investment Options in Uganda',
+              style: subwords,
+            ),
+            Text(
+              'Diversify your portfolio by investing in different industries',
+              style: normalText,
+            ),
+              ],
+            ),
           ),
-          Text(
-            'INVESTMENTS',
-            style: categories,
-          ),
-          // SizedBox(height: 5,),
-          Text(
-            'Several Investment Options in Uganda',
-            style: subwords,
-          ),
-          Text(
-            'Diversify your portfolio by investing in different industries',
-            style: normalText,
-          ),
+          
           
           
         ],

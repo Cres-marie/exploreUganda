@@ -1,4 +1,5 @@
 import 'package:explore_uganda/components/constants/constants.dart';
+import 'package:explore_uganda/screens/homeScreens/attractionsTabs/AttractionsTab.dart';
 import 'package:flutter/material.dart';
 
 class Accomodation extends StatefulWidget {
@@ -34,43 +35,51 @@ class _AccomodationState extends State<Accomodation> {
           SizedBox(
             height: 5,
           ),
-
-          Image.asset('assets/accomodation.png'),
-          SizedBox(
-            height: 10,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AttractionsTab()),
+              );
+            },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Image.asset('assets/accomodation.png'),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'VILLA',
+                  style: categories,
+                ),
+                // SizedBox(height: 5,),
+                Text(
+                  'Flat in Kampala',
+                  style: subwords,
+                ),
+                Text(
+                  '1 bedroom with a spacious living room',
+                  style: normalText,
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Row(
+                  children: [
+                    RichText(
+                      text: TextSpan(text: "\$23", style: subwords, children: [
+                        TextSpan(
+                          text: "/night",
+                        ),
+                      ]),
+                    )
+                  ],
+                )
+              ],
+            ),
           ),
-          Text(
-            'VILLA',
-            style: categories,
-          ),
-          // SizedBox(height: 5,),
-          Text(
-            'Flat in Kampala',
-            style: subwords,
-          ),
-          Text(
-            '1 bedroom with a spacious living room',
-            style: normalText,
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Row(
-            children: [
-              RichText(
-                text: TextSpan(
-                    text: "\$23",
-                    style: subwords,
-                    children: [
-                      TextSpan(
-                        text: "/night",
-                        
-                        
-                      ),
-                    ]),
-              )
-            ],
-          )
         ],
       ),
     );

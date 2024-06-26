@@ -18,25 +18,22 @@ class Explore extends StatefulWidget {
 }
 
 class _ExploreState extends State<Explore> with SingleTickerProviderStateMixin {
-
   late TabController _tabController;
 
-   @override
+  @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 8, vsync: this);
   }
 
   @override
-void dispose() {
+  void dispose() {
     _tabController.dispose();
     super.dispose();
   }
 
-  
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: SafeArea(
         child: Padding(
           padding: bpadding,
@@ -44,63 +41,55 @@ void dispose() {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                
-                  Row(
-                    children: [
-                      
-                      Image.asset('assets/logo.png')
-                      
-                    ],
-                  ),
-
-                  CustomAppRow()
-                ]),
-
-                SizedBox(height: 15,),
-
-                Text('Explore', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),),
-              
-              SizedBox(height: 15,),
-
-              TabBar(
-                  controller: _tabController,
-                  indicatorColor: appcolor,
-                  
-                  isScrollable: true,
-                  tabAlignment: TabAlignment.start,
-                  unselectedLabelColor: Colors.black87,
-                  labelColor: appcolor,
-                  tabs: [
-                   
-                    Tab(text: 'Top Attractions'),
-                    Tab(text: 'Accomodation'),
-                    Tab(text: 'Air & Car Travel'),
-                    Tab(text: 'Hospitals'),
-                    Tab(text: 'Banks'),
-                    Tab(text: 'Police Stations'),
-                    Tab(text: 'Supermarket'),
-                    Tab(text: 'Nightlife'),
-                  
-              
-                  ],
+                Row(
+                  children: [Image.asset('assets/logo.png')],
                 ),
-              
+                CustomAppRow()
+              ]),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                'Explore',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              TabBar(
+                controller: _tabController,
+                indicatorColor: appcolor,
+                isScrollable: true,
+                tabAlignment: TabAlignment.start,
+                unselectedLabelColor: Colors.black87,
+                labelColor: appcolor,
+                tabs: [
+                  Tab(text: 'Top Attractions'),
+                  Tab(text: 'Accomodation'),
+                  Tab(text: 'Air & Car Travel'),
+                  Tab(text: 'Hospitals'),
+                  Tab(text: 'Banks'),
+                  Tab(text: 'Police Stations'),
+                  Tab(text: 'Supermarket'),
+                  Tab(text: 'Nightlife'),
+                ],
+              ),
               Expanded(
                 child: TabBarView(
                   controller: _tabController,
-                  children:  [
-                   
-                   TopAttractions(),
-                   Accomodation(),
-                   AirCarTravel(),
-                   Hospitals(),
-                   Banks(),
-                   PoliceStations(),
-                   Supermarkets(),
-                   NightLife()
-                   
+                  children: [
+                    TopAttractions(),
+                    Accomodation(),
+                    AirCarTravel(),
+                    Hospitals(),
+                    Banks(),
+                    PoliceStations(),
+                    Supermarkets(),
+                    NightLife()
                   ],
                 ),
               ),
@@ -108,8 +97,6 @@ void dispose() {
           ),
         ),
       ),
-
-
     );
   }
 }
