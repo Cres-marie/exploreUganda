@@ -45,6 +45,12 @@ class _AllState extends State<All> {
 
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: appcolor,
+        onPressed: (){},
+        child: Icon(Icons.cloud_outlined, color: Colors.black,),
+      ),
+    
     );
   }
 }
