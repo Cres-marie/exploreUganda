@@ -20,83 +20,83 @@ class _AttractionsState extends State<Attractions> {
 
           SizedBox(height: 10,),
 
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
+          // SingleChildScrollView(
+          //   scrollDirection: Axis.horizontal,
+          //   child: Row(
+          //     children: [
+          //       Column(
+          //         crossAxisAlignment: CrossAxisAlignment.start,
+          //           mainAxisAlignment: MainAxisAlignment.start,
 
-                  children: [
-                    Text(
-                    'WATER BODIES',
-                    style: categories,
-                  ),
-                  // SizedBox(height: 5,),
-                  Text(
-                    'Murchison Falls',
-                    style: subwords,
-                  ),
-                  Text(
-                    'Experience Uganda’s largest waterfall and enjoy nature',
-                    style: normalText,
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.location_on_outlined,
-                        size: 15,
-                      ),
-                      Text(
-                        'Masindi, Uganda',
-                        style: normalText,
-                      )
-                    ],
-                  )
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
+          //         children: [
+          //           Text(
+          //           'WATER BODIES',
+          //           style: categories,
+          //         ),
+          //         // SizedBox(height: 5,),
+          //         Text(
+          //           'Murchison Falls',
+          //           style: subwords,
+          //         ),
+          //         Text(
+          //           'Experience Uganda’s largest waterfall and enjoy nature',
+          //           style: normalText,
+          //         ),
+          //         SizedBox(
+          //           height: 5,
+          //         ),
+          //         Row(
+          //           children: [
+          //             Icon(
+          //               Icons.location_on_outlined,
+          //               size: 15,
+          //             ),
+          //             Text(
+          //               'Masindi, Uganda',
+          //               style: normalText,
+          //             )
+          //           ],
+          //         )
+          //         ],
+          //       ),
+          //       Column(
+          //         crossAxisAlignment: CrossAxisAlignment.start,
+          //           mainAxisAlignment: MainAxisAlignment.start,
                     
-                  children: [
-                    Text(
-                    'WATER BODIES',
-                    style: categories,
-                  ),
-                  // SizedBox(height: 5,),
-                  Text(
-                    'Murchison Falls',
-                    style: subwords,
-                  ),
-                  Text(
-                    'Experience Uganda’s largest waterfall and enjoy nature',
-                    style: normalText,
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.location_on_outlined,
-                        size: 15,
-                      ),
-                      Text(
-                        'Masindi, Uganda',
-                        style: normalText,
-                      )
-                    ],
-                  )
-                  ],
-                )
-              ],
-            ),
-          ),
+          //         children: [
+          //           Text(
+          //           'WATER BODIES',
+          //           style: categories,
+          //         ),
+          //         // SizedBox(height: 5,),
+          //         Text(
+          //           'Murchison Falls',
+          //           style: subwords,
+          //         ),
+          //         Text(
+          //           'Experience Uganda’s largest waterfall and enjoy nature',
+          //           style: normalText,
+          //         ),
+          //         SizedBox(
+          //           height: 5,
+          //         ),
+          //         Row(
+          //           children: [
+          //             Icon(
+          //               Icons.location_on_outlined,
+          //               size: 15,
+          //             ),
+          //             Text(
+          //               'Masindi, Uganda',
+          //               style: normalText,
+          //             )
+          //           ],
+          //         )
+          //         ],
+          //       )
+          //     ],
+          //   ),
+          // ),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
